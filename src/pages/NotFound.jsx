@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
+import { useEffect } from "react";
 
 const NotFound = () => {
-  return (
-    <div>NotFound</div>
-  )
-}
+  useEffect(() => {
+    document.title = "Error 404 (Not Found)!!";
+  }, []);
+  return <div>NotFound</div>;
+};
 
-export default NotFound
+export default NotFound;

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ButtonSearchCar = () => {
-  return (
-    <div>ButtonSearchCar</div>
-  )
-}
+  return <div>ButtonSearchCar</div>;
+};
 
-export default ButtonSearchCar
+export default ButtonSearchCar;

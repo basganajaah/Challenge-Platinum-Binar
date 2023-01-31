@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const WhyUs = () => {
-  return (
-    <div>WhyUs</div>
-  )
-}
+  return <div>WhyUs</div>;
+};
 
-export default WhyUs
+export default WhyUs;

@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
+import { useEffect } from "react";
 
 const CarDetails = () => {
-  return (
-    <div>CarDetails</div>
-  )
-}
+  useEffect(() => {
+    document.title = "Binar Car Rental - Car Details";
+  }, []);
+  return <div>CarDetails</div>;
+};
 
-export default CarDetails
+export default CarDetails;
