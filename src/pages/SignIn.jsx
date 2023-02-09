@@ -1,8 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import SignInImg from "../assets/signin.png";
-import "bootstrap/dist/css/bootstrap.min.css";
+import LoginImg from "../assets/login.jpg";
+import LoginLogo from "../assets/login-logo.png";
+// import { Link } from "react-router-dom";
+// import SignInImg from "../assets/signin.png";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 const SignIn = () => {
   useEffect(() => {
@@ -10,50 +12,49 @@ const SignIn = () => {
   }, []);
 
   return (
-    <div className="signin">
-      <div className="signin-second">
-        <div className="signin-content">
-          <div className="signin-logo">
-            <svg
-              width="100"
-              height="34"
-              viewBox="0 0 100 34"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="100" height="34" fill="#CFD4ED" />
-            </svg>
-          </div>
-          <div className="signin-form">
-            <h3>Welcome Back!</h3>
-            <form>
-              <label className="fw-bold">Email</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Contoh johndee@gmail.com"
-              />
-              <label className="fw-bold">Password</label>
-              <input
-                type="password"
-                name="password"
-                placeholder="6+ karakter"
-              />
-              <button className="fw-bold" style={{ color: "white" }}>
-                Sign In
-              </button>
-            </form>
-            <p>
-              Don’t have an account? <Link to="/sign-up">Sign Up for free</Link>
-            </p>
-          </div>
-        </div>
+    <div className="flex flex-col lg:flex-row justify-center h-screen w-full">
+      <div className="xl:w-2/3 hidden xl:block">
+        <img
+          className="w-full h-full object-cover"
+          src={LoginImg}
+          alt="LoginImg"
+        />
       </div>
-      <div className="signin-pic">
-        <div>
-          <h1>Binar Car Rental</h1>
-          <img src={SignInImg} alt="signinpic" />
-        </div>
+
+      <div className="flex flex-col xl:w-1/3 lg:w-full justify-center">
+        <form className="max-w-[500px] w-full mx-auto lg:p-0 p-8 px-8 rounded-lg">
+          <img src={LoginLogo} alt="LoginLogo" />
+          <h2 className="text-4xl dark:text-black font-bold pt-4 pb-6">
+            Welcome, Admin BCR!
+          </h2>
+
+          <div className="flex flex-col text-black-900 py-2">
+            <label className="font-medium text-lg">Email</label>
+            <input
+              className="text-center text-lg rounded-xl border mt-2 p-2 focus:bg-indigo-50"
+              type="email"
+              name="email"
+              placeholder="Contoh: johndee@gmail.com"
+            />
+          </div>
+
+          <div className="flex flex-col text-black-900 py-2">
+            <label className="font-medium text-lg">Password</label>
+            <input
+              className="text-center text-lg rounded-xl border mt-2 p-2 focus:bg-indigo-50"
+              type="password"
+              name="email"
+              placeholder="6+ Karakter"
+            />
+          </div>
+
+          <button
+            className="w-full my-5 py-2 rounded-xl bg-blue-700 shadow-xl shadow-blue-200 hover:bg-blue-600 transition duration-300 dark:text-white font-medium text-lg"
+            type="submit"
+          >
+            Sign In
+          </button>
+        </form>
       </div>
     </div>
   );
