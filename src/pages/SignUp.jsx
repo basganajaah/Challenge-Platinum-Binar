@@ -10,7 +10,7 @@ const SignUp = () => {
   }, []);
 
   return (
-    <div className="signin">SignUPPage</div>
+    <div className="signin">SignUpPage</div>
   );
 };
 
